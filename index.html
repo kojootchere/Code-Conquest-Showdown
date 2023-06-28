@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Page Title -->
+    <title>Code Conquest Showdown!</title>
+    <!-- Link to CSS Stylesheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header section starts -->
+    <header id="header-nav">
+        <section class="header-left-section">
+            <!-- Button to view highscores -->
+            <a onclick="getScore()" href="#">
+                <h4><button class="highScoreButton" onclick="viewHighscores()"> Highscores</a></h4>
+            </a>
+        </section>
+        <section class="header-right-section">
+            <!-- Time remaining for the quiz -->
+            <h4>Time: <span id="time-remaining">0</span></h4>
+        </section>
+    </header>
+    <!-- Header section ends -->
+
+    <!-- Main quiz section starts -->
+    <main id="quiz-container">
+        <section id="quiz-body">
+            <!-- Quiz introduction -->
+            <h1>Code Conquest Showdown!</h1>
+            <h3>
+                Brace yourself to solve the upcoming programming riddles against the clock. Beware, every wrong strike
+                will cost you precious ten seconds off your countdown!
+            </h3>
+            <!-- Button to start the quiz -->
+            <button onclick="startQuiz()">Start</button>
+        </section>
+    </main>
+    <!-- Main quiz section ends -->
+
+    <!-- Link to JavaScript file -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
