@@ -1,0 +1,113 @@
+.toEnd {
+  /* Ensures child elements are aligned towards the end */
+  justify-content: flex-end;
+  /* Makes the container a flex container */
+  display: flex;
+}
+
+.toStart {
+  /* Ensures child elements are aligned towards the start */
+  justify-content: flex-start;
+  /* Makes the container a flex container */
+  display: flex;
+}
+
+#navigation {
+  /* Flex container for navigation elements */
+  display: flex;
+  /* Background color of the navigation bar */
+  background-color: #f0f0f0;
+  /* Width of the navigation bar to fill the parent container */
+  width: 100%;
+  /* Top margin to control spacing with respect to upper element */
+  margin-top: 0;
+}
+
+body {
+  /* Font family for all elements in the body */
+  font-family: Arial, Helvetica, sans-serif;
+  /* Background color of the body */
+  background-color: rgb(255, 255, 255);
+}
+
+#quiz-body {
+  /* Aligns all the text inside the #quiz-body element to the center */
+  text-align: center;
+  
+  /* Adds padding to the #quiz-body element equivalent to 12% of the viewport height.
+     This padding applies on all four sides - top, right, bottom, left. */
+  padding: 12vh;
+}
+
+
+#content {
+  /* Aligns text to both the left and right margins, adding extra space between words as necessary */
+  text-align: justify;
+  /* Space around the content */
+  padding: 5%;
+}
+
+h4 {
+  /* Padding around h4 elements to create space around text */
+  padding: 5px;
+}
+
+a {
+  /* Styles the appearance of the link text */
+  text-decoration: underline;
+  /* Color of the link text */
+  color: #333333;
+}
+
+button {
+  /* Border around the button */
+  border: 1px solid #47a8d9;
+  /* Background color of the button */
+  background-color: #47a8d9;
+  /* Color of the button text */
+  color: #000000;
+  /* Rounded corners of the button */
+  border-radius: 10px;
+  /* Space inside the button */
+  padding: 15px 20px;
+  /* Size of the button text */
+  font-size: 16px;
+  /* Font of the button text */
+  font-family: Arial, Helvetica, sans-serif;
+  /* Space around the button */
+  margin: 5px;
+}
+
+button:hover {
+  /* Transition effect duration when button state changes */
+  transition-duration: 0.2s;
+  /* Background color of the button when hovered */
+  background-color: #090cb8;
+}
+
+.highScoreButton {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+#quizSection {
+  /* Aligns text to the left */
+  text-align: left;
+}
