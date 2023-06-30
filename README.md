@@ -24,8 +24,8 @@ Here's what you can expect from "Code Conquest Showdown!":
 
 ## Screenshot
 
-![Code Conquest Showdown!]()
+![Code Conquest Showdown!](./assets/images/Code-Conquest-Showdown-screenshot.jpeg)
 
 ## Link to the Deployed Application
 
-Link to Deployed Application:
+Link to Deployed Application: https://kojootchere.github.io/Code-Conquest-Showdown/

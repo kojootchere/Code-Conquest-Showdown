@@ -1,113 +1,191 @@
-.toEnd {
-  /* Ensures child elements are aligned towards the end */
-  justify-content: flex-end;
-  /* Makes the container a flex container */
-  display: flex;
+/* Import Google Fonts to use in CSS. Two font families are imported: Roboto and Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Define CSS variables inside :root. These variables can be used throughout the CSS file */
+:root {
+  /* Color used as the primary theme color */
+  --primary-color: #47a8d9;
+
+  /* Color used for hover effects */
+  --hover-color: #090cb8;
+
+  /* Color used for links */
+  --link-color: #333333;
+
+  /* Color used for backgrounds */
+  --background-color: #f2f2f2;
+
+  /* Color used for the body background */
+  --body-background-color: grey;
+
+  /* Color used for the high score button */
+  --high-score-color: #069;
+
+  /* Font family used for the body text */
+  --font-family-body: 'Roboto', sans-serif;
+
+  /* Font family used for headings */
+  --font-family-headings: 'Montserrat', sans-serif;
 }
 
-.toStart {
-  /* Ensures child elements are aligned towards the start */
-  justify-content: flex-start;
-  /* Makes the container a flex container */
-  display: flex;
-}
-
-#navigation {
-  /* Flex container for navigation elements */
-  display: flex;
-  /* Background color of the navigation bar */
-  background-color: #f0f0f0;
-  /* Width of the navigation bar to fill the parent container */
-  width: 100%;
-  /* Top margin to control spacing with respect to upper element */
-  margin-top: 0;
-}
-
+/* Set the font family and background color for the body */
 body {
-  /* Font family for all elements in the body */
-  font-family: Arial, Helvetica, sans-serif;
-  /* Background color of the body */
-  background-color: rgb(255, 255, 255);
+  /* Use the body font family variable */
+  font-family: var(--font-family-body);
+
+  /* Use the body background color variable */
+  background-color: var(--body-background-color);
 }
 
-#quiz-body {
-  /* Aligns all the text inside the #quiz-body element to the center */
+/* Set the font family for all heading tags (h1 to h6) */
+h1, h2, h3, h4, h5, h6 {
+  /* Use the headings font family variable */
+  font-family: var(--font-family-headings);
+}
+
+/* Define a flex class for flex containers */
+.flex {
+  display: flex;
+}
+
+/* Define a class to align child elements towards the end */
+.toEnd {
+  justify-content: flex-end;
+  display: flex;
+}
+
+/* Define a class to align child elements towards the start */
+.toStart {
+  justify-content: flex-start;
+  display: flex;
+}
+
+/* Define styles for the navigation element */
+#navigation {
+  display: flex;
+  /* Use the background color variable */
+  background-color: var(--background-color);
+
+  /* Set the width to 100% to take up the full width of its container */
+  width: 100%;
+}
+
+/* Define styles for the right section of the header */
+.header-right-section {
+  /* Center the text */
   text-align: center;
-  
-  /* Adds padding to the #quiz-body element equivalent to 12% of the viewport height.
-     This padding applies on all four sides - top, right, bottom, left. */
+
+  /* Add padding equivalent to 2% of the viewport height */
+  padding: 2vh;
+}
+
+/* Define styles for the quiz body */
+#quiz-body {
+  /* Center the text */
+  text-align: center;
+
+  /* Add padding equivalent to 12% of the viewport height */
   padding: 12vh;
 }
 
-
+/* Define styles for the content */
 #content {
-  /* Aligns text to both the left and right margins, adding extra space between words as necessary */
+  /* Justify the text to align it to both the left and right margins */
   text-align: justify;
-  /* Space around the content */
+
+  /* Add padding equivalent to 5% of its container */
   padding: 5%;
 }
 
+/* Define styles for h4 elements */
 h4 {
-  /* Padding around h4 elements to create space around text */
+  /* Add padding of 5px around the text */
   padding: 5px;
 }
 
+/* Define styles for links */
 a {
-  /* Styles the appearance of the link text */
+  /* Underline the text */
   text-decoration: underline;
-  /* Color of the link text */
-  color: #333333;
+
+  /* Use the link color variable */
+  color: var(--link-color);
 }
 
+/* Define styles for buttons */
 button {
-  /* Border around the button */
-  border: 1px solid #47a8d9;
-  /* Background color of the button */
-  background-color: #47a8d9;
-  /* Color of the button text */
+  /* Set the border to 1px solid and use the primary color variable */
+  border: 1px solid var(--primary-color);
+
+  /* Use the primary color variable for the background color */
+  background-color: var(--primary-color);
+
+  /* Set theSure, here's the continuation of the comments:
+
+```css
+  /* Set the text color to black */
   color: #000000;
-  /* Rounded corners of the button */
+
+  /* Round the corners of the button */
   border-radius: 10px;
-  /* Space inside the button */
+
+  /* Add space inside the button */
   padding: 15px 20px;
-  /* Size of the button text */
+
+  /* Set the size of the button text */
   font-size: 16px;
-  /* Font of the button text */
-  font-family: Arial, Helvetica, sans-serif;
-  /* Space around the button */
+
+  /* Use the body font family variable for the button text */
+  font-family: var(--font-family-body);
+
+  /* Add space around the button */
   margin: 5px;
-}
 
-button:hover {
-  /* Transition effect duration when button state changes */
+  /* Set the transition duration for hover effects */
   transition-duration: 0.2s;
-  /* Background color of the button when hovered */
-  background-color: #090cb8;
 }
 
+/* Define hover styles for buttons */
+button:hover {
+  /* Use the hover color variable for the background color when the button is hovered */
+  background-color: var(--hover-color);
+}
+
+/* Define styles for the high score button */
 .highScoreButton {
-  background: none!important;
+  /* Remove the background color */
+  background: none !important;
+
+  /* Remove the border */
   border: none;
-  padding: 0!important;
-  /*optional*/
-  font-family: arial, sans-serif;
-  /*input has OS specific font-family*/
-  color: #069;
+
+  /* Remove the padding */
+  padding: 0 !important;
+
+  /* Use the body font family variable for the button text */
+  font-family: var(--font-family-body);
+
+  /* Use the high score color variable for the text color */
+  color: var(--high-score-color);
+
+  /* Underline the text */
   text-decoration: underline;
+
+  /* Change the cursor to a pointer when hovering over the button */
   cursor: pointer;
 }
 
-.row {
-  display: flex;
-}
-
-/* Create two equal columns that sits next to each other */
+/* Define styles for columns */
 .column {
+  /* Set the flex grow factor to 50% to make two equal columns */
   flex: 50%;
+
+  /* Add 10px of padding */
   padding: 10px;
 }
 
+/* Define styles for the quiz section */
 #quizSection {
-  /* Aligns text to the left */
+  /* Align the text to the left */
   text-align: left;
 }
